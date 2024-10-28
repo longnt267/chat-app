@@ -1,9 +1,10 @@
 import { Form, Row, Col, Button, Alert } from "react-bootstrap";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 const Register = () => {
   const [error, setError] = useState("");
-
+  const user = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
